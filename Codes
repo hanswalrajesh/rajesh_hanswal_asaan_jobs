@@ -1,0 +1,130 @@
+Codes:
+
+
+Question 1: Sheeba's code for finding repeated element 
+Algo:
+1.An array has been created which includes all the elements Sheeba wrote
+2.Create a map with key as numbers and value as it's count 
+3.Only unique elements will be included in a map and coresponding counts will be 1 and we put "if" condition for violating condition point .
+4.Print the element violated the condition
+5.End of program
+
+
+Question 2:  Website
+
+abc.html
+
+
+<html>
+<body>
+<form name="x" action="abc.html"  method="POST" >
+Origin:<input type="text" name="origin">
+Destination:<input type="text" name="dest">
+Start Date:<input type="date" name="start">
+End Date:<input type="date" name="last">
+<button type="submit" value="submit" name="Submit"></button>
+
+</form>
+<img src="Shimla.jpg"/>
+<img src="jalandhar.jpg"/>
+<img src="Goa.jpg"/>
+<img src="Kashmir.jpg"/>
+
+<?php
+if(isset('submit'))
+{
+//Recommendation can be done here by passing the uRl
+}
+
+?>
+
+</body>
+
+
+</html>
+
+
+
+Second File
+
+Shimla.html(After selecting destination,Recommendation)
+
+
+
+<html>
+<body>
+<img href="Shimla.jpg"/>
+
+</body>
+</html>
+
+
+
+
+
+
+
+Question 3:Closest to zero
+
+//Code to find pair whose sum is closest to zero
+
+# include <stdio.h>
+# include <stdlib.h> 
+# include <math.h>
+void sumMin(int arr[], int arr_size)
+{
+  int inv_count = 0;
+  int l, r, min_sum, sum, leftmin, rightmin;
+ 
+   if(arr_size < 2)
+  {
+    printf("Invalid Input");
+    return;
+  }
+  leftmin = 0;
+  rightmin = 1;
+  min_sum = arr[0] + arr[1];
+ 
+  for(l = 0; l < arr_size - 1; l++)
+  {
+    for(r = l+1; r < arr_size; r++)
+    {
+      sum = arr[l] + arr[r];
+      if(abs(min_sum) > abs(sum))
+      {
+        min_sum = sum;
+        leftmin = l;
+        rightmin = r;
+      }
+    }
+  }
+ 
+  printf(" The elements whose sum is minimum are %d and %d",
+          arr[leftmin], arr[rightmin]);
+}
+ 
+/* Driver program to test above function */
+int main()
+{
+  int arr[] = {1, 60, -10, 70, -80, 85};
+  sumMin(arr, 6);
+  getchar();
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
